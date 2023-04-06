@@ -1,0 +1,70 @@
+@import 'var.scss';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+}
+
+.ex {
+    width: 100px;
+    height: 100px;
+    border: 10px solid red;
+}
+
+.wrapper {
+    background-color: white;
+    width: 100vmin;
+    height: 75vmin;
+
+    @media screen and (max-width: 480px) {
+        height: 60vmax;
+    }
+}
+
+.drop-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    border: 5px $border;
+    border-style: dashed solid;
+    position: relative;
+
+    
+    h1 {
+        font-size: 1.3rem;
+        position: absolute;
+        top: -15%;
+        left: 0;
+    }  
+
+    &__img {
+        width: 30%;
+        align-self: center;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+
+        label {
+            color: $blue;
+
+            input {
+                display: none;
+            }
+
+            &:hover { 
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__extensions {
+        font-size: 1rem;
+        font-style: italic;
+    }
+}
+
+.active {
+    border: 7px solid $border;
+}
