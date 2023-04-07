@@ -1,6 +1,7 @@
 const dropArea = document.querySelector('.drop-area');
 const text = document.querySelector('.drop-area__text');
 const input = document.querySelector('#link');
+const imgDestination = document.querySelector('.drop-area__loaded-picture');
 let dropClass = /drop-area/;
 let supportedExtensions = ['image/jpeg', 'image/jpg', 'image/png']; 
 
@@ -46,9 +47,15 @@ input.addEventListener('change', function() {
 // file processor
 
 function showFile(file) {
-    console.log(file);
     if (supportedExtensions.includes(file.type)) {
-        
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+
+        reader.onload = () => {
+            let res = reader.result;
+            imgDestination.classList.remove('d-none');
+            imgDestination.src = res;
+        }
     } else {
         alert('This file extention is not supported!');
     }

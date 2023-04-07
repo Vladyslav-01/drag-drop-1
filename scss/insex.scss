@@ -30,6 +30,16 @@ body {
     border-style: dashed solid;
     position: relative;
 
+    &__loaded-picture {
+        position: absolute;
+        // z-index: 2;
+        top: -2%;
+        left: -2%;
+        width: 104%;
+        height: 104%;
+        object-fit: cover;
+    }
+
     
     h1 {
         font-size: 1.3rem;

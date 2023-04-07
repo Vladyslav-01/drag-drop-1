@@ -29,6 +29,15 @@ body {
   border-style: dashed solid;
   position: relative;
 }
+.drop-area__loaded-picture {
+  position: absolute;
+  top: -2%;
+  left: -2%;
+  width: 104%;
+  height: 104%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .drop-area h1 {
   font-size: 1.3rem;
   position: absolute;
