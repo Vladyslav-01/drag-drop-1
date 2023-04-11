@@ -13,14 +13,19 @@
     <section class="wrapper d-flex flex-column justify-content-center align-items-center gap-3 t">
         <div class="drop-area">
 
-            <img src="#" class="drop-area__loaded-picture d-none" alt="Something went wrong, try again">
+            <div class="drop-area__picture-container">
+                <img src="#" class="drop-area__loaded-picture d-none" alt="Something went wrong, try again">
+                <button class="drop-area__close-btn d-none">
+                    <img src="./img/close-button.svg">
+                </button>
+            </div>
             
             <h1>Upload your file: </h1>
             <img src="./img/drag-and-drop.svg" class="drop-area__img" alt="place your image here">
             <p class="drop-area__text">Drag & Drop or 
-                <label for="link">
+                <label for="link" id="label">
                     <input type="file" id="link">
-                        browse
+                    browse
                 </label>
             </p>
             <span class="drop-area__extensions">Supports JPEG, JPG, PNG</span>
